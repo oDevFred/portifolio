@@ -1,0 +1,214 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1f6feb;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(13, 17, 23, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li {
+    font-size: 1rem;
+}
+
+.menu li a {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.menu li a:hover {
+    background: #1f6feb;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url(/img/via-lactea2.jpg) no-repeat center/cover;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    padding: 0.5rem 1.5rem;
+    background: #58a6ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.hero .btn:hover {
+    background: #1f6feb;
+}
+
+/* Sobre Mim */
+.about {
+    padding: 2rem;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Portifólio */
+
+.portifolio {
+    padding: 2rem;
+    text-align: center;
+}
+
+.portifolio h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #161b22;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #58a6ff;
+}
+
+.project a {
+    color: #58a6ff;
+    font-weight: bold;
+}
+
+/* Contato */
+.contact {
+    padding: 2rem;
+    text-align: center;
+    background: #161b22;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin: 0.5rem 0;
+}
+
+.contact a {
+    font-size: 1.2rem;
+    color: #58a6ff;
+}
+
+/* Script */
+.animate {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #58a6ff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(13, 17, 23, 0.9);
+    color: #c9d1d9;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+}
