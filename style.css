@@ -256,7 +256,7 @@ footer {
         padding: 1rem;
     }
 }
-
+  
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
