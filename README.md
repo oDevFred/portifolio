@@ -4,23 +4,41 @@ Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido c
 
 ## 💻 Funcionalidades
 
-- **Home**: Introdução pessoal com uma breve descrição e um botão para acessar o portfólio.
-- **Sobre mim**: Informações sobre a formação e áreas de interesse de Caio Frederico.
-- **Portfólio**: Exibição de projetos realizados, como o próprio site de portfólio, com links para visualizar o código-fonte.
-- **Contato**: Formas de entrar em contato, com links para redes sociais e e-mail.
-- **Animações e rolagem suave**: Transições elegantes e animações baseadas em rolagem.
+- **Design Responsivo**: Layout adaptável para diferentes tamanhos de tela
+- **Menu Hamburguer**: Menu interativo para dispositivos móveis com efeito de blur
+- **Home**: Introdução pessoal com uma breve descrição e um botão para acessar o portfólio
+- **Sobre mim**: Informações sobre a formação e áreas de interesse
+- **Portfólio**: Exibição de projetos realizados com links para o código-fonte
+- **Contato**: Links diretos para e-mail e GitHub
+- **Animações**: Transições suaves e efeitos visuais modernos
+- **Botão "Voltar ao Topo"**: Navegação rápida para o topo da página
 
 ## 🚀 Tecnologias Utilizadas
 
-- **HTML5**: Estruturação do conteúdo da página.
-- **CSS3**: Estilização e responsividade, incluindo efeitos visuais e design moderno.
-- **JavaScript**: Animações, rolagem suave e interatividade, como o botão "Voltar ao topo".
+- **HTML5**: Estruturação semântica do conteúdo
+- **CSS3**: 
+  - Estilização moderna
+  - Flexbox para layouts responsivos
+  - Animações e transições
+  - Efeitos de blur e transparência
+  - Media queries para responsividade
+- **JavaScript**: 
+  - Interatividade do menu
+  - Animações suaves
+  - Funcionalidade do botão "Voltar ao topo"
+
+## 🎨 Design
+
+- **Tema Escuro**: Interface moderna com tons escuros
+- **Elementos Transparentes**: Uso de blur e transparência para efeitos visuais
+- **Tipografia**: Fonte Roboto para melhor legibilidade
+- **Responsividade**: Design adaptável para mobile e desktop
 
 ## 🧑‍💻 Como Executar o Projeto
 
 ### Requisitos
 
-- Navegador moderno (Chrome, Firefox, Edge, etc.)
+- Navegador moderno com suporte a CSS3 e JavaScript
 
 ### Passos
 
@@ -42,9 +60,12 @@ Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido c
 portifolio/
 │
 ├── index.html       # Arquivo principal HTML
-├── style.css        # Arquivo de estilos CSS
-├── scripts.js       # Arquivo com scripts JavaScript
-└── img/             # Imagens utilizadas no site
+├── style.css        # Estilos e responsividade
+├── img/            # Imagens e recursos visuais
+│   ├── logo-planeta.svg
+│   ├── preview.svg
+│   └── sistema.svg
+└── README.md       # Documentação do projeto
 ```
 
 ## 📂 Como Contribuir
