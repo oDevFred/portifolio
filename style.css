@@ -276,3 +276,135 @@ footer {
         padding: 0.4rem 1rem;
     }
 }
+
+/* Estilos do menu hamburguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #58a6ff;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(22, 27, 34, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+
+    .menu.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .menu li {
+        margin: 20px 0;
+    }
+
+    .menu li a {
+        color: #bbc2c9;
+    }
+
+    .menu li a:hover {
+        color: #58a6ff;
+        background: rgba(88, 166, 255, 0.1);
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fechar o menu */
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.close-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #58a6ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.close-menu span:first-child {
+    transform: rotate(45deg);
+}
+
+.close-menu span:last-child {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .close-menu {
+        display: block;
+    }
+}

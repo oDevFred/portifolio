@@ -44,3 +44,27 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Menu Hamburguer
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    const overlay = document.querySelector('.overlay');
+    const closeButton = document.querySelector('.close-menu');
+    const menuItems = document.querySelectorAll('.menu a');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        overlay.classList.toggle('active');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+    closeButton.addEventListener('click', toggleMenu);
+
+    // Fecha o menu quando um item é clicado
+    menuItems.forEach(item => {
+        item.addEventListener('click', toggleMenu);
+    });
+});
