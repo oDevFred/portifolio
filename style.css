@@ -408,3 +408,14 @@ footer {
         display: block;
     }
 }
+
+/* Ícones de Tecnologias utilizadas */
+.tech-icons {
+    margin-top: 10px;
+}
+
+.tech-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
