@@ -187,6 +187,19 @@ a:hover {
 .contact ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact li a {
+    font-size: 1.5rem;
+    color: #58a6ff;
+    transition: color 0.3s;
+}
+
+.contact li a:hover {
+    color: #1f6feb;
 }
 
 .contact li {
