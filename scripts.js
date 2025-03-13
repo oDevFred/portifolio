@@ -68,3 +68,40 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', toggleMenu);
     });
 });
+
+// Efeito de Typewriter com Cursor
+const typewriterSpan = document.getElementById('typewriter');
+const cursorSpan = document.getElementById('cursor');
+const textToType = "Olá, eu sou Caio Frederico!";
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+    if (!isDeleting) {
+        // Durante a digitação, garante que o cursor fique fixo
+        cursorSpan.classList.remove('blink');
+        typewriterSpan.textContent = textToType.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === textToType.length) {
+            // Quando o texto termina, ativa o cursor piscante e espera 2 segundos
+            cursorSpan.classList.add('blink');
+            setTimeout(() => {
+                isDeleting = true;
+                typeLoop();
+            }, 2000);
+            return;
+        }
+    } else {
+        // Durante a deleção, o cursor fica fixo
+        cursorSpan.classList.remove('blink');
+        typewriterSpan.textContent = textToType.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeleting = false;
+        }
+    }
+    // Define o delay para digitação (150ms) ou deleção (100ms)
+    let delay = isDeleting ? 100 : 150;
+    setTimeout(typeLoop, delay);
+}
+typeLoop();
