@@ -1,6 +1,6 @@
 # Portfólio - oDevFred
 
-Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido como **oDevFred**. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento back-end e design de interfaces. 
+Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido como **oDevFred**. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end. 
 
 ## 💻 Funcionalidades
 
