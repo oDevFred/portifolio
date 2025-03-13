@@ -81,6 +81,16 @@ a:hover {
     text-align: center;
     padding: 3rem 1rem;
     background: url(https://odevfred.github.io/portifolio/img/sistema.svg) no-repeat center/cover;
+    animation: moveBg 30s linear infinite;
+}
+
+@keyframes moveBg {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 .hero h2 {
@@ -278,11 +288,15 @@ footer {
         padding: 1rem;
     }
 }
-  
+
 @media (max-width: 480px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem 1rem; /* ajuste conforme necessário */
+        box-sizing: border-box;
     }
 
     .hero h2 {
