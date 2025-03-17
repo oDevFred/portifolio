@@ -58,14 +58,15 @@ Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido c
 
 ```
 portifolio/
-│
-├── index.html       # Arquivo principal HTML
-├── style.css        # Estilos e responsividade
-├── img/            # Imagens e recursos visuais
-│   ├── logo-planeta.svg
-│   ├── preview.svg
-│   └── sistema.svg
-└── README.md       # Documentação do projeto
+├── LICENSE
+├── README.md
+├── img
+    ├── logo-planeta.svg
+    ├── preview.svg
+    └── sistema.svg
+├── index.html
+├── scripts.js
+└── style.css
 ```
 
 ## 📂 Como Contribuir
