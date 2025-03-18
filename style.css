@@ -3,21 +3,21 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d1117;
-    color: #bbc2c9;
+    background-color: #180124;
+    color: #ffffffd3;
     text-shadow: 5%;
     line-height: 1.6;
 }
 
 /* Links */
 a {
-    color: #58a6ff;
+    color: #be50f8;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1f6feb;
+    color: #9728d2;
 }
 
 /* Navbar */
@@ -26,15 +26,15 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(13, 17, 23, 0.9);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(187, 87, 241, 0.116);
+    box-shadow: 0 2px 10px rgba(209, 123, 255, 0.096);
     border-radius: 10px;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #58a6ff;
+    color: #9728d2;
 }
 
 .logo-container {
@@ -44,14 +44,14 @@ a:hover {
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #58a6ff;
+    color: #be50f8;
     margin: 0;
 }
 
@@ -72,7 +72,7 @@ a:hover {
 }
 
 .menu li a:hover {
-    background: #1f6feb;
+    background: #aa3ce5;
     color: #fff;
 }
 
@@ -82,6 +82,7 @@ a:hover {
     padding: 3rem 1rem;
     background: url(https://odevfred.github.io/portifolio/img/sistema.svg) no-repeat center/cover;
     animation: moveBg 30s linear infinite;
+    background-color: rgba(190, 80, 248, 0.2);
 }
 
 @keyframes moveBg {
@@ -105,7 +106,7 @@ a:hover {
 
 .hero .btn {
     padding: 0.5rem 1.5rem;
-    background: #58a6ff;
+    background: #aa3ce5;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -117,7 +118,7 @@ a:hover {
 }
 
 .hero .btn:hover {
-    background: #1f6feb;
+    background: #9728d2;
 }
 
 /* Sobre Mim */
@@ -158,13 +159,13 @@ a:hover {
 
 /* Card do Projeto */
 .project {
-    background: #161b22;
+    background: rgba(149, 90, 180, 0.2);
     padding: 1rem;
     border-radius: 10px;
     width: 300px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(100, 42, 131, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -172,7 +173,7 @@ a:hover {
 .project h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #58a6ff;
+    color: #aa3ce5;
 }
 .project p {
     text-align: center;
@@ -195,7 +196,7 @@ a:hover {
 .contact {
     padding: 2rem;
     text-align: center;
-    background: #161b22;
+    background: rgba(187, 87, 241, 0.116);
 }
 
 .contact h2 {
@@ -213,12 +214,12 @@ a:hover {
 
 .contact li a {
     font-size: 1.5rem;
-    color: #58a6ff;
+    color: #aa3ce5;
     transition: color 0.3s;
 }
 
 .contact li a:hover {
-    color: #1f6feb;
+    color: #9728d2;
 }
 
 .contact li {
@@ -227,7 +228,7 @@ a:hover {
 
 .contact a {
     font-size: 1.2rem;
-    color: #58a6ff;
+    color: #aa3ce5;
 }
 
 /* Script */
@@ -244,7 +245,7 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #58a6ff;
+    background-color: #aa3ce5;
     color: white;
     padding: 0.5rem 1.5rem;
     border: none;
@@ -259,7 +260,7 @@ a:hover {
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: rgba(13, 17, 23, 0.9);
+    background:#180124;
     color: #c9d1d9;
     font-size: 0.9rem;
     margin: 0 1rem;
@@ -324,7 +325,7 @@ footer {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #58a6ff;
+    background-color: #aa3ce5;
     margin: 2px 0;
     transition: 0.4s;
 }
@@ -352,7 +353,7 @@ footer {
         right: -100%;
         height: 100vh;
         width: 250px;
-        background-color: rgba(22, 27, 34, 0.8);
+        background-color: rgba(18, 10, 22, 0.801);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         padding: 80px 20px 20px;
@@ -376,12 +377,12 @@ footer {
     }
 
     .menu li a {
-        color: #bbc2c9;
+        color: #aa3ce5;
     }
 
     .menu li a:hover {
-        color: #58a6ff;
-        background: rgba(88, 166, 255, 0.1);
+        color: #9728d2;
+        background: rgba(190, 80, 248, 0.1);
     }
 
     .navbar {
@@ -394,7 +395,7 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(187, 87, 241, 0.185);
         z-index: 999;
         opacity: 0;
         visibility: hidden;
@@ -425,7 +426,7 @@ footer {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #58a6ff;
+    background-color: #aa3ce5;
     position: absolute;
     top: 50%;
     left: 0;
@@ -453,7 +454,7 @@ footer {
 .tech-icons i {
     font-size: 24px;
     margin-right: 10px;
-    color: #fff;
+    color: #be50f8;
 }
 
 .cursor {
