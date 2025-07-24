@@ -30,8 +30,8 @@ Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido c
 ## 🎨 Design
 
 - **Tema Escuro**: Interface moderna com tons escuros
-- **Elementos Transparentes**: Uso de blur e transparência para efeitos visuais
-- **Tipografia**: Fonte Roboto para melhor legibilidade
+- **Tema Espacial**: Fundo animado com estrelas e efeito parallax
+- **Tipografia**: Fonte Space Grotesk para uma estética moderna
 - **Responsividade**: Design adaptável para mobile e desktop
 
 ## 🧑‍💻 Como Executar o Projeto

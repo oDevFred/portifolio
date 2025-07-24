@@ -7,40 +7,41 @@
     <meta property="og:title" content="Portfólio - Caio Frederico" />
     <meta property="og:description" content="Bem-vindo ao meu portfólio! Conheça meus projetos e entre em contato comigo." />
     <meta property="og:url" content="https://odevfred.github.io/portifolio" />
-    <meta property="og:image" content="https://odevfred.github.io/portifolio/img/preview.png" />
+    <meta property="og:image" content="https://odevfred.github.io/portifolio/img/preview.jpeg" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="shortcut icon" type="imagex/png" href="https://odevfred.github.io/portifolio/img/favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" defer>
     <meta name="google-adsense-account" content="ca-pub-2076402554104139">
     <title>Portifólio - oDevFred</title>
 </head>
 <body>
+    <!-- Camadas de estrelas para o efeito parallax -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
     <div class="overlay"></div>
-    <!-- HOME -->
-    <header id="home" class="hero">
+    <!-- NAVBAR -->
         <nav class="navbar">
             <div class="logo-container">
                 <img src="https://odevfred.github.io/portifolio/img/logo.svg" alt="Logo" class="logo-img">
-                <h1 class="logo-text">oDevFred</h1>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="menu">
-                <button class="close-menu">
-                    <span></span>
-                    <span></span>
-                </button>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Sobre mim</a></li>
                 <li><a href="#portifolio">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
+
+    <!-- HOME -->
+    <header id="home" class="hero">
         <div class="hero-content">
             <h2 class="hero-heading">
                 <span id="typewriter"></span><span id="cursor" class="cursor">|</span>
@@ -52,8 +53,13 @@
 
     <!-- ABOUT-->
     <section id="about" class="about">
-        <h2>Sobre mim</h2>
-        <p>Sou formado em Técnico de Informática desde 2018, atualmente faço Análise e Desenvolvimento de Sistemas com formação para 2027. Sou apaixonado por games. Estou sempre buscando aprender novas tecnologias e aplicar meus conhecimentos em projetos desafiadores.</p>
+        <div class="about-content">
+            <img src="https://odevfred.github.io/portifolio/img/foto-perfil.jpeg" alt="Foto de Caio Frederico" class="profile-pic">
+            <div class="about-text">
+                <h2>Sobre mim</h2>
+                <p>Sou formado em Técnico de Informática desde 2018, atualmente faço Análise e Desenvolvimento de Sistemas com formação para 2027. Sou apaixonado por games e astronomia. Estou sempre buscando aprender novas tecnologias e aplicar meus conhecimentos em projetos desafiadores.</p>
+            </div>
+        </div>
     </section>
 
     <!-- PORTIFOLIO -->
@@ -66,11 +72,11 @@
                 <p>Este é um portfólio pessoal criado por mim. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end.</p>
                 <div class="tech-icons">
                     <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-bootstrap"></i>
-                    <i class="fab fa-font-awesome"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
+                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                    <i class="fab fa-font-awesome" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -80,11 +86,11 @@
                 <p>Um sistema completo para gerenciamento de frotas de ônibus, incluindo módulos para administradores, central de controle e motoristas. O objetivo é otimizar a operação e a comunicação dentro de uma empresa de transporte.</p>
                 <div class="tech-icons">
                     <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-bootstrap"></i>
-                    <i class="fab fa-node"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
+                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                    <i class="fab fa-node" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -94,9 +100,9 @@
                 <p>Site oficial do modpack Create Back on Track, trazendo todas as informações necessárias sobre o modpack, como links de download, galeria de imagens, criadores de conteúdo, desenvolvedores e integração com o servidor do Discord.</p>
                 <div class="tech-icons">
                     <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -106,10 +112,10 @@
                 <p>Sistema básico de cadastro e login de usuários, desenvolvido como parte da avaliação final de Fundamentos em Nuvem. O projeto utiliza Node.js para o backend, Express como framework web, MySQL para o banco de dados e interfaces HTML/CSS/JavaScript no frontend.</p>
                 <div class="tech-icons">
                     <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-node"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
+                    <i class="fab fa-node" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -119,11 +125,11 @@
                 <p>Este é um projeto de landing page moderna e responsiva, desenvolvida para um escritório de advocacia. O objetivo é apresentar os serviços, a missão e os valores do escritório de forma clara e profissional, facilitando o contato de potenciais clientes.</p>
                 <div class="tech-icons">
                     <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-bootstrap"></i>
-                    <i class="fab fa-font-awesome"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
+                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                    <i class="fab fa-font-awesome" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -135,9 +141,9 @@
         <div class="social-link">
             <p>Conecte-se comigo:</p>
             <ul>
-                <li><a href="mailto:caio.frederico2001@outlook.com"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://github.com/oDevFred" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/caio-eduardo-ferreira-frederico-56ab67349/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="mailto:caio.frederico2001@outlook.com" aria-label="Enviar um e-mail"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/oDevFred" target="_blank" aria-label="Visitar perfil no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/caio-eduardo-ferreira-frederico-56ab67349/" target="_blank" aria-label="Visitar perfil no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </section>

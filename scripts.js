@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
     const overlay = document.querySelector('.overlay');
-    const closeButton = document.querySelector('.close-menu');
     const menuItems = document.querySelectorAll('.menu a');
 
     function toggleMenu() {
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hamburger.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', toggleMenu);
-    closeButton.addEventListener('click', toggleMenu);
 
     // Fecha o menu quando um item é clicado
     menuItems.forEach(item => {
