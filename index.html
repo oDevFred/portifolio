@@ -13,10 +13,10 @@
     
     <!-- Open Graph Meta Tags (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://odevfred.codes/" />
+    <meta property="og:url" content="https://odevfred.github.io/portifolio/" />
     <meta property="og:title" content="oDevFred — Portfólio | Desenvolvedor Web" />
     <meta property="og:description" content="Desenvolvedor web focado em front-end e aplicações completas. Explorando o universo da tecnologia, transformando ideias em experiências digitais." />
-    <meta property="og:image" content="https://odevfred.codes/img/portifolio.png" />
+    <meta property="og:image" content="https://odevfred.github.io/portifolio/img/portifolio.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="oDevFred Portfólio - Desenvolvedor Web" />
@@ -29,15 +29,36 @@
     <meta name="twitter:creator" content="@odevfred" />
     <meta name="twitter:title" content="oDevFred — Portfólio | Desenvolvedor Web" />
     <meta name="twitter:description" content="Desenvolvedor web focado em front-end e aplicações completas. Explorando o universo da tecnologia, transformando ideias em experiências digitais." />
-    <meta name="twitter:image" content="https://odevfred.codes/img/portifolio.png" />
+    <meta name="twitter:image" content="https://odevfred.github.io/portifolio/img/portifolio.png" />
     <meta name="twitter:image:alt" content="oDevFred Portfólio - Desenvolvedor Web" />
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="img/Logo.svg" />
-    <link rel="apple-touch-icon" href="img/Logo.svg" />
+    <!-- Favicon e App Icons -->
+    <!-- Favicon moderno (SVG) -->
+    <link rel="icon" type="image/svg+xml" href="./img/Logo.svg" />
+    <!-- Fallback para navegadores que não suportam SVG -->
+    <link rel="icon" type="image/x-icon" href="./img/Logo.svg" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/Logo.svg" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/Logo.svg" />
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/svg+xml" sizes="192x192" href="./img/Logo.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="512x512" href="./img/Logo.svg" />
+    <!-- Microsoft Windows -->
+    <meta name="msapplication-TileImage" content="./img/Logo.svg" />
+    <meta name="msapplication-config" content="./browserconfig.xml" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./site.webmanifest" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://odevfred.codes/" />
+    <link rel="canonical" href="https://odevfred.github.io/portifolio/" />
     
     <!-- WhatsApp específico -->
     <meta property="og:image:type" content="image/png" />
@@ -103,7 +124,7 @@
         <!-- Logo -->
         <a href="#home" class="flex items-center gap-3">
             <div class="logo-container">
-            <img src="img/Logo.svg" alt="Logo" class="h-10 w-auto md:h-12" />
+            <img src="./img/Logo.svg" alt="Logo" class="h-10 w-auto md:h-12" />
             </div>
         </a>
         <!-- Desktop nav -->
@@ -136,7 +157,7 @@
     
     <!-- Home (Lançamento) -->
     <section id="home" class="h-screen flex flex-col items-center justify-center text-center px-6">
-        <img src="img/astronauta.png" alt="Astronauta"
+        <img src="./img/astronauta.png" alt="Astronauta"
         class="w-32 h-32 float mb-6" />
         <h1 class="text-3xl md:text-6xl font-extrabold text-purple-200 leading-tight">oDevFred</h1>
         <p class="mt-4 text-sm md:text-lg max-w-xl text-purple-100">
@@ -155,7 +176,7 @@
 
         <!-- PORTIFÓLIO -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/portifolio.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <img src="./img/portifolio.png" alt="Projeto 1" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">Site de Portfólio</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Este é um portfólio pessoal criado por mim. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end.</p>
@@ -191,7 +212,7 @@
 
         <!-- SENNUN -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/sennun.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <img src="./img/sennun.png" alt="Projeto 1" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">SENUUN Site</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Este é um projeto de site moderno e responsivo, desenvolvido para a empresa Sennun Comunicação Digital. O objetivo é apresentar a empresa, seus serviços de comunicação e marketing digital e depoimentos de clientes, facilitando o contato com potenciais clientes.</p>
@@ -227,7 +248,7 @@
 
         <!-- ADVOGADOS -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/advogados.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <img src="./img/advogados.png" alt="Projeto 1" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">Landing Page Advogados</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Este é um projeto de landing page moderna e responsiva, desenvolvida para um escritório de advocacia. O objetivo é apresentar os serviços, a missão e os valores do escritório de forma clara e profissional, facilitando o contato de potenciais clientes.</p>
@@ -263,7 +284,7 @@
 
         <!-- SITE CTB -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/ctb.png" alt="Projeto 3" class="w-full h-44 object-cover" />
+            <img src="./img/ctb.png" alt="Projeto 3" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">Site Back on Track</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Site oficial do modpack Create Back on Track, trazendo todas as informações necessárias sobre o modpack, como links de download, galeria de imagens, criadores de conteúdo, desenvolvedores e integração com o servidor do Discord.</p>
@@ -291,7 +312,7 @@
 
         <!-- MAGÉ BUS -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/magebus.png" alt="Projeto 2" class="w-full h-44 object-cover" />
+            <img src="./img/magebus.png" alt="Projeto 2" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">Magé Bus</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Um sistema completo para gerenciamento de frotas de ônibus, incluindo módulos para administradores, central de controle e motoristas. O objetivo é otimizar a operação e a comunicação dentro de uma empresa de transporte.</p>
@@ -325,7 +346,7 @@
 
         <!-- SISTEMA DE AUTENTICAÇÃO -->
         <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
-            <img src="img/cadastro.png" alt="Projeto 2" class="w-full h-44 object-cover" />
+            <img src="./img/cadastro.png" alt="Projeto 2" class="w-full h-44 object-cover" />
             <div class="p-5">
             <h3 class="text-lg font-semibold text-purple-200">Sistema de autenticação</h3>
             <p class="text-sm text-purple-100 mt-2 mb-4">Sistema básico de cadastro e login de usuários, desenvolvido como parte da avaliação final de Fundamentos em Nuvem. O projeto utiliza Node.js para o backend, Express como framework web, MySQL para o banco de dados e interfaces HTML/CSS/JavaScript no frontend.</p>
@@ -362,7 +383,7 @@
     <!-- Sobre Mim (Cápsula) -->
     <section id="sobre" class="py-16 px-6 bg-[#0f0311]/50">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-        <img src="img/foto.webp" alt="Sua foto" class="w-44 h-44 rounded-full object-cover border-4 border-purple-500 shadow-lg" />
+        <img src="./img/foto.webp" alt="Sua foto" class="w-44 h-44 rounded-full object-cover border-4 border-purple-500 shadow-lg" />
         <div>
             <h3 class="text-2xl font-bold text-purple-300 mb-3">Sobre Mim</h3>
             <p class="text-purple-100 leading-relaxed">
