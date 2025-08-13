@@ -13,20 +13,20 @@
     "dir": "ltr",
     "icons": [
         {
-        "src": "/portifolio/img/Logo.svg",
+        "src": "/portifolio/img/Logo.png",
         "sizes": "any",
-        "type": "image/svg+xml",
+        "type": "image/png+xml",
         "purpose": "any maskable"
         },
         {
-        "src": "/portifolio/img/Logo.svg",
+        "src": "/portifolio/img/Logo.png",
         "sizes": "192x192",
-        "type": "image/svg+xml"
+        "type": "image/png+xml"
         },
         {
-        "src": "/portifolio/img/Logo.svg",
+        "src": "/portifolio/img/Logo.png",
         "sizes": "512x512",
-        "type": "image/svg+xml"
+        "type": "image/png+xml"
         }
     ]
 }
