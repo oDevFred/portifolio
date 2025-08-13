@@ -1,160 +1,412 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta Tags para Open Graph -->
-    <meta property="og:title" content="Portfólio - Caio Frederico" />
-    <meta property="og:description" content="Bem-vindo ao meu portfólio! Conheça meus projetos e entre em contato comigo." />
-    <meta property="og:url" content="https://odevfred.github.io/portifolio" />
-    <meta property="og:image" content="https://odevfred.github.io/portifolio/img/preview.jpeg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>oDevFred — Portfólio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Desenvolvedor web focado em front-end e aplicações completas. Explorando o universo da tecnologia, transformando ideias em experiências digitais." />
+    <meta name="keywords" content="desenvolvedor web, front-end, portfólio, HTML, CSS, JavaScript, React, Python, oDevFred" />
+    <meta name="author" content="oDevFred - Caio Frederico" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="https://odevfred.github.io/portifolio/img/favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" defer>
-    <meta name="google-adsense-account" content="ca-pub-2076402554104139">
-    <title>Portifólio - oDevFred</title>
+    <meta property="og:url" content="https://odevfred.codes/" />
+    <meta property="og:title" content="oDevFred — Portfólio | Desenvolvedor Web" />
+    <meta property="og:description" content="Desenvolvedor web focado em front-end e aplicações completas. Explorando o universo da tecnologia, transformando ideias em experiências digitais." />
+    <meta property="og:image" content="https://odevfred.codes/img/portifolio.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="oDevFred Portfólio - Desenvolvedor Web" />
+    <meta property="og:site_name" content="oDevFred Portfólio" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@odevfred" />
+    <meta name="twitter:creator" content="@odevfred" />
+    <meta name="twitter:title" content="oDevFred — Portfólio | Desenvolvedor Web" />
+    <meta name="twitter:description" content="Desenvolvedor web focado em front-end e aplicações completas. Explorando o universo da tecnologia, transformando ideias em experiências digitais." />
+    <meta name="twitter:image" content="https://odevfred.codes/img/portifolio.png" />
+    <meta name="twitter:image:alt" content="oDevFred Portfólio - Desenvolvedor Web" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/Logo.svg" />
+    <link rel="apple-touch-icon" href="img/Logo.svg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://odevfred.codes/" />
+    
+    <!-- WhatsApp específico -->
+    <meta property="og:image:type" content="image/png" />
+    
+    <!-- Theme color -->
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="msapplication-TileColor" content="#7c3aed" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Caio Frederico",
+        "alternateName": "oDevFred",
+        "description": "Desenvolvedor web focado em front-end e aplicações completas",
+        "url": "https://odevfred.codes/",
+        "image": "https://odevfred.codes/img/foto.webp",
+        "sameAs": [
+            "https://www.linkedin.com/in/caio-odevfred-frederico-56ab67349/",
+            "https://github.com/oDevFred",
+            "https://www.instagram.com/odevfred/"
+        ],
+        "jobTitle": "Desenvolvedor Web",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelancer"
+        },
+        "knowsAbout": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Python",
+            "TailwindCSS",
+            "Node.js",
+            "Git",
+            "Docker"
+        ]
+    }
+    </script>
 </head>
-<body>
-    <!-- Camadas de estrelas para o efeito parallax -->
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-
-    <div class="overlay"></div>
-    <!-- NAVBAR -->
-        <nav class="navbar">
+<body class="antialiased">
+    <!-- Canvas de fundo (estrelas) -->
+    <canvas id="stars"></canvas>
+    
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1a0b2e]/90 backdrop-blur-md border-b border-[#2a153b]/50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
             <div class="logo-container">
-                <img src="https://odevfred.github.io/portifolio/img/logo.svg" alt="Logo" class="logo-img">
+            <img src="img/Logo.svg" alt="Logo" class="h-10 w-auto md:h-12" />
             </div>
-            <button class="hamburger" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre mim</a></li>
-                <li><a href="#portifolio">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+        </a>
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex gap-8 items-center text-sm text-purple-100">
+            <a href="#home" class="nav-link hover:text-purple-300">Home</a>
+            <a href="#projetos" class="nav-link hover:text-purple-300">Projetos</a>
+            <a href="#sobre" class="nav-link hover:text-purple-300">Sobre</a>
+            <a href="#contato" class="nav-link hover:text-purple-300">Contato</a>
         </nav>
-
-    <!-- HOME -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h2 class="hero-heading">
-                <span id="typewriter"></span><span id="cursor" class="cursor">|</span>
-            </h2>
-            <p>Entusiasta em tecnologia e apaixonado por games. Vamos construir o futuro juntos!</p>
-            <a href="#portifolio" class="btn">Veja meu trabalho</a>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+            <button id="menu-btn" aria-expanded="false" aria-label="Abrir menu"
+            class="hamburger flex flex-col justify-center items-center">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        </div>
+        <!-- Mobile menu (invisível por padrão) -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-[#1a0b2e]/95 border-t border-[#2a153b]/50">
+        <div class="px-4 py-4 flex flex-col gap-1">
+            <a href="#home" class="py-3 px-2 rounded-lg hover:bg-[#2a153b]/50 hover:text-purple-300 transition-colors">Home</a>
+            <a href="#projetos" class="py-3 px-2 rounded-lg hover:bg-[#2a153b]/50 hover:text-purple-300 transition-colors">Projetos</a>
+            <a href="#sobre" class="py-3 px-2 rounded-lg hover:bg-[#2a153b]/50 hover:text-purple-300 transition-colors">Sobre</a>
+            <a href="#contato" class="py-3 px-2 rounded-lg hover:bg-[#2a153b]/50 hover:text-purple-300 transition-colors">Contato</a>
+        </div>
         </div>
     </header>
-
-    <!-- ABOUT-->
-    <section id="about" class="about">
-        <div class="about-content">
-            <img src="https://odevfred.github.io/portifolio/img/foto-perfil.jpeg" alt="Foto de Caio Frederico" class="profile-pic">
-            <div class="about-text">
-                <h2>Sobre mim</h2>
-                <p>Sou formado em Técnico de Informática desde 2018, atualmente faço Análise e Desenvolvimento de Sistemas com formação para 2027. Sou apaixonado por games e astronomia. Estou sempre buscando aprender novas tecnologias e aplicar meus conhecimentos em projetos desafiadores.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTIFOLIO -->
-    <section id="portifolio" class="portifolio">
-        <h2>Meus Projetos</h2>
-        <div class="projects">
-            <!-- Este site de portifólio -->
-            <div class="project">
-                <h3><a href="https://github.com/oDevFred/portifolio" target="_blank">Site de Portifólio</a></h3>
-                <p>Este é um portfólio pessoal criado por mim. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end.</p>
-                <div class="tech-icons">
-                    <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <i class="fab fa-js" aria-hidden="true"></i>
-                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
-                    <i class="fab fa-font-awesome" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <!-- Mage-Bus -->
-            <div class="project">
-                <h3><a href="https://github.com/oDevFred/mage-bus" target="_blank">Magé Bus</a></h3>
-                <p>Um sistema completo para gerenciamento de frotas de ônibus, incluindo módulos para administradores, central de controle e motoristas. O objetivo é otimizar a operação e a comunicação dentro de uma empresa de transporte.</p>
-                <div class="tech-icons">
-                    <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <i class="fab fa-js" aria-hidden="true"></i>
-                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
-                    <i class="fab fa-node" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <!-- Site Create Back on Track -->
-            <div class="project">
-                <h3><a href="https://odevfred.github.io/Site-CBT/" target="_blank">Site Create Back on Track</a></h3>
-                <p>Site oficial do modpack Create Back on Track, trazendo todas as informações necessárias sobre o modpack, como links de download, galeria de imagens, criadores de conteúdo, desenvolvedores e integração com o servidor do Discord.</p>
-                <div class="tech-icons">
-                    <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <i class="fab fa-js" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <!-- Sistema de autenticação login/cadastro -->
-            <div class="project">
-                <h3><a href="https://github.com/oDevFred/sistema-auth" target="_blank">Sistema de autenticação</a></h3>
-                <p>Sistema básico de cadastro e login de usuários, desenvolvido como parte da avaliação final de Fundamentos em Nuvem. O projeto utiliza Node.js para o backend, Express como framework web, MySQL para o banco de dados e interfaces HTML/CSS/JavaScript no frontend.</p>
-                <div class="tech-icons">
-                    <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <i class="fab fa-js" aria-hidden="true"></i>
-                    <i class="fab fa-node" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <!-- Landing Page Advocacia -->
-            <div class="project">
-                <h3><a href="https://odevfred.github.io/landing-page-advogados/" target="_blank">Landing Page Advocacia</a></h3>
-                <p>Este é um projeto de landing page moderna e responsiva, desenvolvida para um escritório de advocacia. O objetivo é apresentar os serviços, a missão e os valores do escritório de forma clara e profissional, facilitando o contato de potenciais clientes.</p>
-                <div class="tech-icons">
-                    <p>Tecnologias Utilizadas:</p>
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <i class="fab fa-js" aria-hidden="true"></i>
-                    <i class="fab fa-bootstrap" aria-hidden="true"></i>
-                    <i class="fab fa-font-awesome" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2>Contato</h2>
-        <div class="social-link">
-            <p>Conecte-se comigo:</p>
-            <ul>
-                <li><a href="mailto:caio.frederico2001@outlook.com" aria-label="Enviar um e-mail"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/oDevFred" target="_blank" aria-label="Visitar perfil no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/caio-eduardo-ferreira-frederico-56ab67349/" target="_blank" aria-label="Visitar perfil no LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Botão de voltar ao topo -->
-    <button id="backToTop">Voltar ao topo</button>
     
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 All rights reserved - Made with ❤️ by oDevFred</p>
-    </footer>
-    <script src="scripts.js" defer></script>
+    <!-- Home (Lançamento) -->
+    <section id="home" class="h-screen flex flex-col items-center justify-center text-center px-6">
+        <img src="img/astronauta.png" alt="Astronauta"
+        class="w-32 h-32 float mb-6" />
+        <h1 class="text-3xl md:text-6xl font-extrabold text-purple-200 leading-tight">oDevFred</h1>
+        <p class="mt-4 text-sm md:text-lg max-w-xl text-purple-100">
+        Explorando o universo da tecnologia — eu transformo ideias em experiências digitais.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="#projetos" class="btn-glow btn-glow-solid px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 shadow-lg">Iniciar Jornada</a>
+        <a href="#sobre" class="btn-glow px-6 py-3 rounded-full border border-purple-600 text-purple-200 hover:bg-purple-700/30">Sobre</a>
+        </div>
+    </section>
+    
+    <!-- Projetos (Satélites) -->
+    <section id="projetos" class="py-16 px-6 max-w-7xl mx-auto">
+        <h2 class="text-2xl md:text-4xl font-bold text-center text-purple-300 mb-8">Satélites & Estações</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PORTIFÓLIO -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/portifolio.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">Site de Portfólio</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Este é um portfólio pessoal criado por mim. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end.</p>
+            <!-- tech icons -->
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-font-awesome fa-lg"></i><span class="text-xs">FontAwesome</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-lg"></i><span class="text-xs">TailwindCSS</span>
+                </span>
+            </div>
+            <!-- actions -->
+            <div class="mt-4 flex flex-wrap gap-3">
+                <a href="https://odevfred.codes/" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto
+                </a>
+                <a href="#" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+
+        <!-- SENNUN -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/sennun.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">SENUUN Site</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Este é um projeto de site moderno e responsivo, desenvolvido para a empresa Sennun Comunicação Digital. O objetivo é apresentar a empresa, seus serviços de comunicação e marketing digital e depoimentos de clientes, facilitando o contato com potenciais clientes.</p>
+            <!-- tech icons -->
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-font-awesome fa-lg"></i><span class="text-xs">FontAwesome</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-lg"></i><span class="text-xs">TailwindCSS</span>
+                </span>
+            </div>
+            <!-- actions -->
+            <div class="mt-4 flex flex-wrap gap-3">
+                <a href="https://odevfred.github.io/sennun-site/" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto
+                </a>
+                <a href="https://github.com/oDevFred/sennun-site" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+
+        <!-- ADVOGADOS -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/advogados.png" alt="Projeto 1" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">Landing Page Advogados</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Este é um projeto de landing page moderna e responsiva, desenvolvida para um escritório de advocacia. O objetivo é apresentar os serviços, a missão e os valores do escritório de forma clara e profissional, facilitando o contato de potenciais clientes.</p>
+            <!-- tech icons -->
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-font-awesome fa-lg"></i><span class="text-xs">FontAwesome</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-bootstrap fa-lg"></i><span class="text-xs">Bootstrap</span>
+                </span>
+            </div>
+            <!-- actions -->
+            <div class="mt-4 flex flex-wrap gap-3">
+                <a href="https://odevfred.github.io/landing-page-advogados/" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto
+                </a>
+                <a href="https://github.com/oDevFred/landing-page-advogados" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+
+        <!-- SITE CTB -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/ctb.png" alt="Projeto 3" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">Site Back on Track</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Site oficial do modpack Create Back on Track, trazendo todas as informações necessárias sobre o modpack, como links de download, galeria de imagens, criadores de conteúdo, desenvolvedores e integração com o servidor do Discord.</p>
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3">
+                <a href="https://odevfred.github.io/Site-CBT/" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto
+                </a>
+                <a href="https://github.com/oDevFred/Site-CBT" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+
+        <!-- MAGÉ BUS -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/magebus.png" alt="Projeto 2" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">Magé Bus</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Um sistema completo para gerenciamento de frotas de ônibus, incluindo módulos para administradores, central de controle e motoristas. O objetivo é otimizar a operação e a comunicação dentro de uma empresa de transporte.</p>
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-node-js fa-lg"></i><span class="text-xs">Node</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-bootstrap fa-lg"></i><span class="text-xs">Bootstrap</span>
+                </span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3">
+                <!-- <a href="#" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm"> -->
+                <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto -->
+                </a>
+                <a href="https://github.com/oDevFred/mage-bus" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+
+        <!-- SISTEMA DE AUTENTICAÇÃO -->
+        <article class="group relative bg-[#1b0f2a] rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2">
+            <img src="img/cadastro.png" alt="Projeto 2" class="w-full h-44 object-cover" />
+            <div class="p-5">
+            <h3 class="text-lg font-semibold text-purple-200">Sistema de autenticação</h3>
+            <p class="text-sm text-purple-100 mt-2 mb-4">Sistema básico de cadastro e login de usuários, desenvolvido como parte da avaliação final de Fundamentos em Nuvem. O projeto utiliza Node.js para o backend, Express como framework web, MySQL para o banco de dados e interfaces HTML/CSS/JavaScript no frontend.</p>
+            <div class="flex flex-wrap gap-2 text-purple-300">
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-html5 fa-lg"></i><span class="text-xs">HTML</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-css3-alt fa-lg"></i><span class="text-xs">CSS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-js fa-lg"></i><span class="text-xs">JS</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-node-js fa-lg"></i><span class="text-xs">Node</span>
+                </span>
+                <span class="flex items-center gap-2 bg-[#2a153b] p-2 rounded-lg">
+                <i class="fa-brands fa-bootstrap fa-lg"></i><span class="text-xs">Bootstrap</span>
+                </span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3">
+                <!-- <a href="#" class="btn-glow btn-glow-solid inline-flex items-center gap-2 px-3 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm"> -->
+                <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto -->
+                </a>
+                <a href="https://github.com/oDevFred/sistema-auth" class="btn-glow inline-flex items-center gap-2 px-3 py-2 rounded-full border border-purple-600 text-sm text-purple-200 hover:bg-purple-700/20" target="_blank">
+                <i class="fa-solid fa-code"></i> Código
+                </a>
+            </div>
+            </div>
+        </article>
+        </div>
+    </section>
+    
+    <!-- Sobre Mim (Cápsula) -->
+    <section id="sobre" class="py-16 px-6 bg-[#0f0311]/50">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <img src="img/foto.webp" alt="Sua foto" class="w-44 h-44 rounded-full object-cover border-4 border-purple-500 shadow-lg" />
+        <div>
+            <h3 class="text-2xl font-bold text-purple-300 mb-3">Sobre Mim</h3>
+            <p class="text-purple-100 leading-relaxed">
+            Sou desenvolvedor web com foco em front-end e aplicações completas. Gosto de unir design, performance
+            e boas práticas para entregar produtos que as pessoas realmente usam e entendem. <br /><br />
+            Ferramentas: HTML, CSS/Tailwind, JavaScript, React, Python, Docker, Git.
+            </p>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Contato (apenas links) -->
+    <section id="contato" class="py-16 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-purple-300 mb-4">Estação de Comunicação</h3>
+        <p class="text-purple-100 mb-6">Conecte-se comigo nas redes.</p>
+        <div class="flex justify-center gap-6 flex-wrap">
+            <a href="https://www.linkedin.com/in/caio-odevfred-frederico-56ab67349/" target="_blank" rel="noopener" class="flex flex-col items-center gap-2">
+            <div class="social-icon p-4 rounded-full bg-[#2a153b] shadow-lg text-purple-300 text-3xl"><i class="fa-brands fa-linkedin-in"></i></div>
+            <span class="text-xs text-purple-200">LinkedIn</span>
+            </a>
+            <a href="https://github.com/oDevFred" target="_blank" rel="noopener" class="flex flex-col items-center gap-2">
+            <div class="social-icon p-4 rounded-full bg-[#2a153b] shadow-lg text-purple-300 text-3xl"><i class="fa-brands fa-github"></i></div>
+            <span class="text-xs text-purple-200">GitHub</span>
+            </a>
+            <a href="https://www.instagram.com/odevfred/" target="_blank" rel="noopener" class="flex flex-col items-center gap-2">
+            <div class="social-icon p-4 rounded-full bg-[#2a153b] shadow-lg text-purple-300 text-3xl"><i class="fa-brands fa-instagram"></i></div>
+            <span class="text-xs text-purple-200">Instagram</span>
+            </a>
+            <a href="https://discord.gg/sPAZJUEZcx" target="_blank" rel="noopener" class="flex flex-col items-center gap-2">
+            <div class="social-icon p-4 rounded-full bg-[#2a153b] shadow-lg text-purple-300 text-3xl"><i class="fa-brands fa-discord"></i></div>
+            <span class="text-xs text-purple-200">Discord</span>
+            </a>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Botão voltar ao topo -->
+    <button id="top-btn" aria-label="Voltar ao topo"
+        class="btn-glow btn-glow-solid hidden fixed bottom-6 right-6 z-40 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-xl">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    
+    <!-- Script Personalizado -->
+    <script src="script.js"></script>
 </body>
 </html>

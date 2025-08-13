@@ -1,0 +1,163 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #10021f 0%, #060012 100%);
+    color: #ffffff;
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 1px; /* Previne margem inferior */
+}
+
+/* canvas atrás */
+#stars { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width:100%; 
+    height:100vh; 
+    z-index: -1; 
+}
+
+/* astronauta flutuando */
+.float { animation: float 4s ease-in-out infinite; }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* evita que o header fixe cubra os anchors */
+section { scroll-margin-top: 5.5rem; }
+
+/* Efeitos de brilho e aumento nos botões */
+.btn-glow {
+    transition: all 0.3s ease;
+}
+.btn-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+/* Efeito adicional para botões com fundo */
+.btn-glow-solid:hover {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.9);
+}
+
+/* Efeito para ícones de redes sociais */
+.social-icon {
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+}
+
+/* Menu Hamburguer Animado */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #e9d5ff;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+/* Menu Aberto */
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    opacity: 0;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* Menu Mobile Responsivo */
+.mobile-menu {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 300px;
+}
+
+/* Melhorias na Navbar */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #a855f7;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Responsividade para logo */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 40px;
+        height: 40px;
+}
+}
+
+/* Correção para o problema de espaço em branco */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: radial-gradient(ellipse at bottom, #10021f 0%, #060012 100%);
+}

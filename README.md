@@ -1,86 +1,39 @@
-# Portfólio - oDevFred
+# Portfolio
 
-Este é um portfólio pessoal criado por **Caio Frederico**, também conhecido como **oDevFred**. O site é uma vitrine para os projetos de desenvolvimento e habilidades em tecnologia, com foco em desenvolvimento front-end. 
+Um portfólio pessoal moderno e responsivo para mostrar projetos e habilidades de desenvolvimento.
 
-## 💻 Funcionalidades
+## 📋 Sobre o Projeto
 
-- **Design Responsivo**: Layout adaptável para diferentes tamanhos de tela
-- **Menu Hamburguer**: Menu interativo para dispositivos móveis com efeito de blur
-- **Home**: Introdução pessoal com uma breve descrição e um botão para acessar o portfólio
-- **Sobre mim**: Informações sobre a formação e áreas de interesse
-- **Portfólio**: Exibição de projetos realizados com links para o código-fonte
-- **Contato**: Links diretos para e-mail e GitHub
-- **Animações**: Transições suaves e efeitos visuais modernos
-- **Botão "Voltar ao Topo"**: Navegação rápida para o topo da página
+Este é um projeto de portfólio pessoal desenvolvido para apresentar trabalhos, habilidades e experiências de forma profissional e atrativa.
 
 ## 🚀 Tecnologias Utilizadas
 
-- **HTML5**: Estruturação semântica do conteúdo
-- **CSS3**: 
-  - Estilização moderna
-  - Flexbox para layouts responsivos
-  - Animações e transições
-  - Efeitos de blur e transparência
-  - Media queries para responsividade
-- **JavaScript**: 
-  - Interatividade do menu
-  - Animações suaves
-  - Funcionalidade do botão "Voltar ao topo"
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Design
+- Tailwind CSS
+- Font Awesome
 
-## 🎨 Design
-
-- **Tema Escuro**: Interface moderna com tons escuros
-- **Tema Espacial**: Fundo animado com estrelas e efeito parallax
-- **Tipografia**: Fonte Space Grotesk para uma estética moderna
-- **Responsividade**: Design adaptável para mobile e desktop
-
-## 🧑‍💻 Como Executar o Projeto
-
-### Requisitos
-
-- Navegador moderno com suporte a CSS3 e JavaScript
-
-### Passos
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/oDevFred/portifolio.git
-   ```
-   
-2. Navegue até a pasta do projeto:
-   ```bash
-   cd portifolio
-   ```
-
-3. Abra o arquivo `index.html` em seu navegador para visualizar o site.
-
-### Estrutura de Pastas
+## 📁 Estrutura do Projeto
 
 ```
 portifolio/
-├── LICENSE
-├── README.md
-├── img
-    ├── logo-planeta.svg
-    ├── preview.svg
-    └── sistema.svg
 ├── index.html
-├── scripts.js
-└── style.css
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── imgs/
+└── README.md
 ```
 
-## 📂 Como Contribuir
+## 📝 Licença
 
-1. Faça o **fork** deste repositório.
-2. Crie uma nova **branch**: `git checkout -b minha-feature`
-3. Faça suas alterações e **commit** com mensagens claras.
-4. Envie um **pull request**.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 📧 Contato
+## 📞 Contato
 
-- **E-mail**: [caio.frederico2001@outlook.com](mailto:caio.frederico2001@outlook.com)
-- **GitHub**: [oDevFred](https://github.com/oDevFred)
-
-## 🔖 Licença
-
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+- Email: caio.frederico2001@outlook.com
+- LinkedIn: [Caio Eduardo Ferreira Frederico](https://www.linkedin.com/in/caio-odevfred-frederico-56ab67349/)
+- GitHub: [oDevFred](https://github.com/oDevFred)
